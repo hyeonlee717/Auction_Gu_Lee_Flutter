@@ -18,6 +18,14 @@ class MainScreenState extends State<MainScreen> {
     const Center(child: Text('프로필')),
   ];
 
+  final List<String> _pageTitles = [
+    '경매',
+    '지난 경매',
+    '경매 요청',
+    '메세지',
+    '프로필',
+  ];
+
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
@@ -26,38 +34,48 @@ class MainScreenState extends State<MainScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('메인 화면'),
-      ),
-      body: _pages[_selectedIndex],
-      bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.grey.shade200,
-        type: BottomNavigationBarType.fixed,
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home_outlined),
-            label: '경매',
+    return PopScope(
+      canPop: false,
+      child: Scaffold(
+        appBar: AppBar(
+          automaticallyImplyLeading: false,
+          title: Text(
+            _pageTitles[_selectedIndex],
+            style: const TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+            ),
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.history_outlined),
-            label: '지난 경매',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.edit_document),
-            label: '경매 요청',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.message),
-            label: '메세지',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: '프로필',
-          ),
-        ],
-        currentIndex: _selectedIndex,
-        onTap: _onItemTapped,
+        ),
+        body: _pages[_selectedIndex],
+        bottomNavigationBar: BottomNavigationBar(
+          backgroundColor: Colors.grey.shade100,
+          type: BottomNavigationBarType.fixed,
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home_outlined),
+              label: '경매',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.history_outlined),
+              label: '지난 경매',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.edit_document),
+              label: '경매 요청',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.message),
+              label: '메세지',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.person),
+              label: '프로필',
+            ),
+          ],
+          currentIndex: _selectedIndex,
+          onTap: _onItemTapped,
+        ),
       ),
     );
   }
