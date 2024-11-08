@@ -6,9 +6,10 @@ class AuctionListScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.indigo.shade900,
       body: ListView.builder(
         padding: const EdgeInsets.symmetric(vertical: 12.0),
-        itemCount: 10, // 예시로 10개의 항목을 표시
+        itemCount: 10,
         itemBuilder: (context, index) {
           return Container(
             padding: const EdgeInsets.all(15.0),
@@ -32,7 +33,7 @@ class AuctionListScreen extends StatelessWidget {
                   height: 80,
                   color: Colors.red,
                 ), // 경매 아이콘
-                const SizedBox(width: 10),
+                const SizedBox(width: 30),
                 Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,

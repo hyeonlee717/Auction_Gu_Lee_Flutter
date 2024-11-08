@@ -40,40 +40,55 @@ class MainScreenState extends State<MainScreen> {
       child: Scaffold(
         appBar: AppBar(
           automaticallyImplyLeading: false,
-          backgroundColor: Colors.white,
           elevation: 2,
-          shadowColor: Colors.white,
+          backgroundColor: Colors.indigo.shade900,
           title: Text(
             _pageTitles[_selectedIndex],
-            style: const TextStyle(
+            style: TextStyle(
               fontSize: 25,
               fontWeight: FontWeight.bold,
+              color: Colors.amber.shade900,
             ),
           ),
         ),
         body: _pages[_selectedIndex],
         bottomNavigationBar: BottomNavigationBar(
-          backgroundColor: Colors.grey.shade100,
+          backgroundColor: Colors.pinkAccent.shade400,
           type: BottomNavigationBarType.fixed,
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
-              icon: Icon(Icons.home_outlined),
+              icon: Icon(
+                Icons.home_outlined,
+                color: Colors.white,
+              ),
               label: '경매',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.history_outlined),
+              icon: Icon(
+                Icons.history_outlined,
+                color: Colors.white,
+              ),
               label: '지난 경매',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.edit_document),
+              icon: Icon(
+                Icons.edit_document,
+                color: Colors.white,
+              ),
               label: '경매 요청',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.message),
+              icon: Icon(
+                Icons.message,
+                color: Colors.white,
+              ),
               label: '메세지',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.person),
+              icon: Icon(
+                Icons.person,
+                color: Colors.white,
+              ),
               label: '프로필',
             ),
           ],
