@@ -75,13 +75,17 @@ class SignupScreen extends StatelessWidget {
                   style: TextStyle(color: Colors.white),
                 ),
                 const SizedBox(height: 20),
-                const TextField(
-                  decoration: InputDecoration(
+                TextField(
+                  decoration: const InputDecoration(
                     labelText: '전화번호',
                     labelStyle: TextStyle(color: Colors.white),
                     border: OutlineInputBorder(),
                   ),
-                  style: TextStyle(color: Colors.white),
+                  style: const TextStyle(color: Colors.white),
+                  keyboardType: TextInputType.phone,
+                  inputFormatters: [
+                    FilteringTextInputFormatter.digitsOnly, // 숫자만 입력 가능
+                  ],
                 ),
                 const SizedBox(height: 20),
                 const ElevatedButton(
