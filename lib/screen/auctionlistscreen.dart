@@ -6,10 +6,53 @@ class AuctionListScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(
+          onPressed: () {},
+          icon: const Icon(
+            Icons.swap_vert,
+            size: 30,
+            color: Colors.white,
+          ),
+        ),
+        actions: [
+          Row(
+            children: [
+              IconButton(
+                onPressed: () {},
+                icon: const Icon(
+                  Icons.notifications_none,
+                  size: 30,
+                  color: Colors.white,
+                ),
+              ),
+              IconButton(
+                onPressed: () {},
+                icon: const Icon(
+                  Icons.search,
+                  size: 30,
+                  color: Colors.white,
+                ),
+              ),
+            ],
+          ),
+        ],
+        automaticallyImplyLeading: false,
+        elevation: 0,
+        backgroundColor: Colors.blueAccent,
+        title: const Text(
+          '경매',
+          style: TextStyle(
+            fontSize: 25,
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
+          ),
+        ),
+      ),
       backgroundColor: Colors.blueAccent,
       body: ListView.builder(
         padding: const EdgeInsets.symmetric(vertical: 12.0),
-        itemCount: 10,
+        itemCount: 30,
         itemBuilder: (context, index) {
           return Container(
             padding: const EdgeInsets.all(15.0),

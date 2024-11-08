@@ -39,19 +39,6 @@ class MainScreenState extends State<MainScreen> {
       canPop: false,
       child: Scaffold(
         backgroundColor: Colors.blueAccent,
-        appBar: AppBar(
-          automaticallyImplyLeading: false,
-          elevation: 0,
-          backgroundColor: Colors.blueAccent,
-          title: Text(
-            _pageTitles[_selectedIndex],
-            style: const TextStyle(
-              fontSize: 25,
-              fontWeight: FontWeight.bold,
-              color: Colors.white,
-            ),
-          ),
-        ),
         body: Column(
           children: [
             Expanded(child: _pages[_selectedIndex]),
@@ -60,8 +47,8 @@ class MainScreenState extends State<MainScreen> {
               decoration: const BoxDecoration(
                 color: Color(0xFFE7626C),
                 borderRadius: BorderRadius.only(
-                  topRight: Radius.circular(15),
-                  topLeft: Radius.circular(15),
+                  topRight: Radius.circular(0),
+                  topLeft: Radius.circular(0),
                 ),
               ),
             ),
