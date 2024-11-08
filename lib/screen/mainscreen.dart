@@ -44,10 +44,10 @@ class MainScreenState extends State<MainScreen> {
           backgroundColor: Colors.indigo.shade900,
           title: Text(
             _pageTitles[_selectedIndex],
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 25,
               fontWeight: FontWeight.bold,
-              color: Colors.amber.shade900,
+              color: Colors.white,
             ),
           ),
         ),
