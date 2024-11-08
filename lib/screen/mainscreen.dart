@@ -38,6 +38,7 @@ class MainScreenState extends State<MainScreen> {
     return PopScope(
       canPop: false,
       child: Scaffold(
+        backgroundColor: Colors.blueAccent,
         appBar: AppBar(
           automaticallyImplyLeading: false,
           elevation: 0,
@@ -51,7 +52,21 @@ class MainScreenState extends State<MainScreen> {
             ),
           ),
         ),
-        body: _pages[_selectedIndex],
+        body: Column(
+          children: [
+            Expanded(child: _pages[_selectedIndex]),
+            Container(
+              height: 10,
+              decoration: const BoxDecoration(
+                color: Color(0xFFE7626C),
+                borderRadius: BorderRadius.only(
+                  topRight: Radius.circular(15),
+                  topLeft: Radius.circular(15),
+                ),
+              ),
+            ),
+          ],
+        ),
         bottomNavigationBar: BottomNavigationBar(
           selectedItemColor: Colors.white,
           unselectedItemColor: Colors.white.withOpacity(0),
