@@ -53,6 +53,8 @@ class MainScreenState extends State<MainScreen> {
         ),
         body: _pages[_selectedIndex],
         bottomNavigationBar: BottomNavigationBar(
+          selectedItemColor: Colors.white,
+          unselectedItemColor: Colors.white.withOpacity(0),
           backgroundColor: Colors.pinkAccent.shade400,
           type: BottomNavigationBarType.fixed,
           items: const <BottomNavigationBarItem>[
