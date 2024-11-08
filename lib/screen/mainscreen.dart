@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'auctionlistscreen.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -11,7 +12,7 @@ class MainScreenState extends State<MainScreen> {
   int _selectedIndex = 0;
 
   final List<Widget> _pages = [
-    const Center(child: Text('경매')),
+    const AuctionListScreen(),
     const Center(child: Text('지난 경매')),
     const Center(child: Text('경매 요청')),
     const Center(child: Text('메세지')),
@@ -39,10 +40,13 @@ class MainScreenState extends State<MainScreen> {
       child: Scaffold(
         appBar: AppBar(
           automaticallyImplyLeading: false,
+          backgroundColor: Colors.white,
+          elevation: 2,
+          shadowColor: Colors.white,
           title: Text(
             _pageTitles[_selectedIndex],
             style: const TextStyle(
-              fontSize: 20,
+              fontSize: 25,
               fontWeight: FontWeight.bold,
             ),
           ),
