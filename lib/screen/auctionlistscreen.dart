@@ -6,7 +6,7 @@ class AuctionListScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.indigo.shade900,
+      backgroundColor: Colors.blueAccent,
       body: ListView.builder(
         padding: const EdgeInsets.symmetric(vertical: 12.0),
         itemCount: 10,
@@ -15,7 +15,7 @@ class AuctionListScreen extends StatelessWidget {
             padding: const EdgeInsets.all(15.0),
             margin: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 12.0),
             decoration: BoxDecoration(
-              color: Colors.grey.shade100,
+              color: const Color(0xFFF4EDDB),
               borderRadius: BorderRadius.circular(15.0),
               boxShadow: [
                 BoxShadow(

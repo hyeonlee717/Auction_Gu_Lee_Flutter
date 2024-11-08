@@ -40,8 +40,8 @@ class MainScreenState extends State<MainScreen> {
       child: Scaffold(
         appBar: AppBar(
           automaticallyImplyLeading: false,
-          elevation: 2,
-          backgroundColor: Colors.indigo.shade900,
+          elevation: 0,
+          backgroundColor: Colors.blueAccent,
           title: Text(
             _pageTitles[_selectedIndex],
             style: const TextStyle(
@@ -55,7 +55,7 @@ class MainScreenState extends State<MainScreen> {
         bottomNavigationBar: BottomNavigationBar(
           selectedItemColor: Colors.white,
           unselectedItemColor: Colors.white.withOpacity(0),
-          backgroundColor: Colors.pinkAccent.shade400,
+          backgroundColor: const Color(0xFFE7626C),
           type: BottomNavigationBarType.fixed,
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
