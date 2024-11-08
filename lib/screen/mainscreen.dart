@@ -19,14 +19,6 @@ class MainScreenState extends State<MainScreen> {
     const Center(child: Text('프로필')),
   ];
 
-  final List<String> _pageTitles = [
-    '경매',
-    '지난 경매',
-    '경매 요청',
-    '메세지',
-    '프로필',
-  ];
-
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;

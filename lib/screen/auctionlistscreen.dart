@@ -51,7 +51,7 @@ class AuctionListScreen extends StatelessWidget {
       ),
       backgroundColor: Colors.blueAccent,
       body: ListView.builder(
-        padding: const EdgeInsets.symmetric(vertical: 12.0),
+        padding: const EdgeInsets.symmetric(vertical: 6.0),
         itemCount: 30,
         itemBuilder: (context, index) {
           return Container(
