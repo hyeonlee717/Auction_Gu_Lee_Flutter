@@ -34,16 +34,6 @@ class MainScreenState extends State<MainScreen> {
         body: Column(
           children: [
             Expanded(child: _pages[_selectedIndex]),
-            Container(
-              height: 10,
-              decoration: const BoxDecoration(
-                color: Color(0xFFE7626C),
-                borderRadius: BorderRadius.only(
-                  topRight: Radius.circular(0),
-                  topLeft: Radius.circular(0),
-                ),
-              ),
-            ),
           ],
         ),
         bottomNavigationBar: BottomNavigationBar(
