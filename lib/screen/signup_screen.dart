@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart'; // 추가된 코드
+import 'package:flutter/services.dart';
 
 class SignupScreen extends StatelessWidget {
   const SignupScreen({super.key});
@@ -32,7 +32,7 @@ class SignupScreen extends StatelessWidget {
                   keyboardType: TextInputType.emailAddress,
                   inputFormatters: [
                     FilteringTextInputFormatter.allow(
-                        RegExp(r'^[a-zA-Z0-9@._-]+$')), // 한글 입력 불가능
+                        RegExp(r'^[a-zA-Z0-9@._-]+$')),
                   ],
                 ),
                 const SizedBox(height: 20),
