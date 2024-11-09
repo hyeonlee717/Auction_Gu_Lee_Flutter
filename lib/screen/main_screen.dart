@@ -38,8 +38,10 @@ class MainScreenState extends State<MainScreen> {
           ],
         ),
         bottomNavigationBar: BottomNavigationBar(
+          selectedFontSize: 12.0,
+          unselectedFontSize: 2.0,
           selectedItemColor: Colors.white,
-          unselectedItemColor: Colors.white.withOpacity(0),
+          unselectedItemColor: const Color(0xFFE7626C),
           backgroundColor: const Color(0xFFE7626C),
           type: BottomNavigationBarType.fixed,
           items: const <BottomNavigationBarItem>[
